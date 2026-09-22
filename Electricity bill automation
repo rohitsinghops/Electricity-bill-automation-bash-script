@@ -1,0 +1,21 @@
+#!/bin/bash
+
+# fir electricity bill
+
+read -p "Enter your electricity unit!!!!" unit
+
+if [[ $unit = 0 ]];
+then
+        echo "your account is not create"
+elif [[ $unit -le 100 ]];
+then
+        echo "your electricity bill is free!!!"
+elif [[ $unit -le 200 ]];
+then
+        echo "your electricity unit amount is !! $(( unit * 5 )) and your bill is 5 rupees per unit"
+elif [[ $unit -gt 200 ]];
+then
+        echo "your electricity unit amount is !! $(( unit * 10 )) and your bill is 10 rupees per unit"
+else
+        echo "invalid amount"
+fi
